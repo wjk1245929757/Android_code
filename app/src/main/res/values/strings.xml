@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">wjk</string>
+    <string name="first_button">first_button</string>
+    <string name="hello_world_it_is_wjk">Hello World，It is wjk!</string>
 </resources>
