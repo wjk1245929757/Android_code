@@ -1,8 +1,5 @@
 package com.example.wjk;
 
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,15 +7,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity{
-    private static final String TAG = "SecondActivity";
+import androidx.appcompat.app.AppCompatActivity;
+
+
+public class single_instance extends AppCompatActivity {
+
+    private static final String TAG = "single_instance";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG,"It is create!");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_activity);
+        setContentView(R.layout.single_top);
 
         String myprocessname = getApplicationInfo().processName;
         String activityinfo = this.toString();
@@ -33,7 +34,28 @@ public class SecondActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Log.d(TAG,"Button has been clicked!");
-                Intent intent = new Intent(SecondActivity.this,MainActivity.class);
+//                setContentView(R.layout.second_activity);
+                Intent intent = new Intent(single_instance.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button mybtn1 = findViewById(R.id.button_2);
+        mybtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG,"Button has been clicked!");
+//                setContentView(R.layout.second_activity);
+                Intent intent = new Intent(single_instance.this,single_instance.class);
+                startActivity(intent);
+            }
+        });
+        Button mybtn2 = findViewById(R.id.button_3);
+        mybtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(TAG,"Button has been clicked!");
+//                setContentView(R.layout.second_activity);
+                Intent intent = new Intent(single_instance.this,single_instance2.class);
                 startActivity(intent);
             }
         });
@@ -69,5 +91,4 @@ public class SecondActivity extends AppCompatActivity{
         Log.d(TAG,"It is resume!");
         super.onResume();
     }
-
 }

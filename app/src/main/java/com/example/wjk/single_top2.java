@@ -1,8 +1,5 @@
 package com.example.wjk;
 
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,15 +7,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity{
-    private static final String TAG = "SecondActivity";
+import androidx.appcompat.app.AppCompatActivity;
+
+public class single_top2 extends AppCompatActivity {
+
+    private static final String TAG = "single_top2";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG,"It is create!");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_activity);
+        setContentView(R.layout.single_top2);
 
         String myprocessname = getApplicationInfo().processName;
         String activityinfo = this.toString();
@@ -33,7 +33,8 @@ public class SecondActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Log.d(TAG,"Button has been clicked!");
-                Intent intent = new Intent(SecondActivity.this,MainActivity.class);
+//                setContentView(R.layout.second_activity);
+                Intent intent = new Intent(single_top2.this,single_top.class);
                 startActivity(intent);
             }
         });
@@ -69,5 +70,4 @@ public class SecondActivity extends AppCompatActivity{
         Log.d(TAG,"It is resume!");
         super.onResume();
     }
-
 }

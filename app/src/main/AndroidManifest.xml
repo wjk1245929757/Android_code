@@ -16,6 +16,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity"/>
+        <activity android:name=".standard_mode" android:launchMode="standard"/>
+        <activity android:name=".single_top" android:launchMode="singleTop"/>
+        <activity android:name=".single_task" android:launchMode="singleTask"/>
+        <activity android:name=".single_instance" android:launchMode="singleInstance"/>
+        <activity android:name=".standard_mode2" android:launchMode="standard"/>
+        <activity android:name=".single_top2" android:launchMode="singleTop"/>
+        <activity android:name=".single_task2" android:launchMode="singleTask"/>
+        <activity android:name=".single_instance2" android:launchMode="singleInstance"/>
     </application>
 
 </manifest>
