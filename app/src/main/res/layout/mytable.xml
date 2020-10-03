@@ -1,6 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    android:background="#000000">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        android:text="TableLayout"/>
+    <TableRow>
+        <EditText
+            android:id="@+id/et_led"
+            android:layout_width="fill_parent"
+            android:background="@android:drawable/editbox_background"
+            android:digits="1234567890.+-*/=%\n\t()"
+            android:text=""
+            android:minLines="3"
+            android:layout_span="4" />
+    </TableRow>
+    <TableRow>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="1dip"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="1dip"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="1dip"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/button_di"
+            android:layout_width="1dip"
+            android:text="/" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="1dip"
+            android:text="4"
+            android:layout_column="0"/>
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="1dip"
+            android:text="5"
+            android:layout_column="1"/>
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="1dip"
+            android:text="6"
+            android:layout_column="2"/>
+        <Button
+            android:id="@+id/button_mul"
+            android:layout_width="1dip"
+            android:text="×"
+            android:layout_column="3"/>
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="1dip"
+            android:layout_column="0"
+            android:text="7" />
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="1dip"
+            android:text="8"
+            android:layout_column="1"/>
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="1dip"
+            android:text="9"
+            android:layout_column="2"/>
+        <Button
+            android:id="@+id/button_mi"
+            android:layout_width="1dip"
+            android:text="-"
+            android:layout_column="3"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="1dip"
+            android:text="0"
+            android:layout_span="2"
+            android:layout_column="0"/>
+        <Button
+            android:id="@+id/button_dot"
+            android:layout_width="1dip"
+            android:text="."
+            android:layout_column="2"/>
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="1dip"
+            android:text="+"
+            android:layout_column="3"/>
+    </TableRow>
+    <Button
+        android:id="@+id/button_equal"
+        android:layout_width="1dip"
+        android:text="=">
+    </Button>
+</TableLayout>
